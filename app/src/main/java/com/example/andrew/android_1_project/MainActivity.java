@@ -1,8 +1,10 @@
 package com.example.andrew.android_1_project;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.multidex.MultiDex;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -18,22 +20,12 @@ public class MainActivity extends AppCompatActivity {
     private EditText secondOperand;
     private EditText firstOperand;
 
+    public final static String EXTRA_MESSAGE = "example.andrew.android_1_project.MESSAGE";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.content_main);
-
-        Button sumBtn = (Button) findViewById(R.id.summBtn);
-        secondOperand = (EditText) findViewById(R.id.secondOperandText);
-        firstOperand = (EditText) findViewById(R.id.firstOperandText);
-        result = (EditText) findViewById(R.id.resultText);
-        sumBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Integer resid = Integer.parseInt(firstOperand.getText().toString()) + Integer.parseInt(secondOperand.getText().toString());
-                result.setText(resid.toString());
-            }
-        });
+        setContentView(R.layout.activity_main);
     }
 
 
@@ -57,5 +49,14 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    /** Called when the user clicks the Send button */
+    public void sendMessage(View view) {
+        Intent intent = new Intent(this, DisplayMessageActivity.class);
+        EditText editText = (EditText) findViewById(R.id.edit_message);
+        String message = editText.getText().toString();
+        intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);
     }
 }

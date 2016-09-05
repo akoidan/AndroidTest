@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Андроид демо</string>
+    <string name="action_settings">Настройки</string>
+    <string name="edit_message">Введите сообщение</string>
+    <string name="button_send">Отослать</string>
+    <string name="pass_intent_msg">Сообщение:</string>
+</resources>
