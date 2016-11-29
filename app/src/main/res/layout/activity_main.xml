@@ -28,6 +28,12 @@
         android:layout_height="wrap_content"
         android:text="@string/button_send_email"
         android:onClick="sendEmail"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/go_layout_btn"
+        android:onClick="goPref"
+        />
 
 
 </LinearLayout>

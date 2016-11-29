@@ -6,4 +6,7 @@
     <string name="pass_intent_msg">Сообщение:</string>
     <string name="button_send_email">Email</string>
     <string name="default_lable_text">пусто</string>
+    <string name="hello_blank_fragment">ЙО</string>
+    <string name="go_layout_btn">Лейаутс</string>
+    <string name="edit_preferense_">Редактироваьт</string>
 </resources>

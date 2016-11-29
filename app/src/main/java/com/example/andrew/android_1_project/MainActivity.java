@@ -75,6 +75,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void goPref(View view) {
+        startActivity(new Intent(this, SharPrefDemo.class));
+    }
+
     public void sendEmail(View view) {
         Intent email = new Intent(Intent.ACTION_SEND);
         email.putExtra(Intent.EXTRA_EMAIL, new String[]{"nightmare.quake@mail.ru"});

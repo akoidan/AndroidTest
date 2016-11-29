@@ -6,4 +6,9 @@
     <string name="button_send_email">Email</string>
     <string name="pass_intent_msg">Mes1sage:</string>
     <string name="default_lable_text">def</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="go_layout_btn">layouts</string>
+    <string name="edit_preferense_">Edit</string>
 </resources>
