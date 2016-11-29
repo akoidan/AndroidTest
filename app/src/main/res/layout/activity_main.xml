@@ -6,23 +6,25 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
     <TextView android:id="@+id/main_text"
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="default"
+        android:textSize="30sp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="@string/default_lable_text"
         />
+
     <EditText android:id="@+id/edit_message"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:layout_width="20dp"
+        android:layout_width="match_parent"
         android:hint="@string/edit_message" />
+
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/button_send"
         android:onClick="sendMessage"/>
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/button_send_email"
         android:onClick="sendEmail"/>

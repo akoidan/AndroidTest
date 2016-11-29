@@ -5,26 +5,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:theme="@android:style/Theme.Dialog"
-    android:orientation="horizontal">
+    android:orientation="vertical">
     <TextView android:id="@+id/main_text"
-
-        android:layout_width="wrap_content"
+        android:textSize="30sp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="default"
-        />
+        android:text="default"/>
+
     <EditText android:id="@+id/edit_message"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:layout_width="20dp"
+        android:layout_width="match_parent"
         android:hint="@string/edit_message" />
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/button_send"
         android:onClick="sendMessage"/>
+
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/button_send"
-        android:onClick="sendEmail"/>
+        android:onClick="sendEmail"
+        android:id="@+id/button" />
 </LinearLayout>

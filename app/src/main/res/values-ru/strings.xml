@@ -5,4 +5,5 @@
     <string name="button_send">Отослать</string>
     <string name="pass_intent_msg">Сообщение:</string>
     <string name="button_send_email">Email</string>
+    <string name="default_lable_text">пусто</string>
 </resources>

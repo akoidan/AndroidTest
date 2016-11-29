@@ -2,28 +2,23 @@ package com.example.andrew.android_1_project;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.multidex.MultiDex;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import java.util.Vector;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String LABEL_TEXT = "LabelText";
+    public static final String SAVED_DATE = "LabelText";
     private TextView label;
     private EditText edit;
-
+    DateFormat df = new SimpleDateFormat("mm:ss");
     static int createdTimes = 0;
 
 
@@ -31,17 +26,20 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        label = (TextView) findViewById(R.id.main_text);
     }
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-        if (label != null) {
-            label.setText(savedInstanceState.getString(LABEL_TEXT));
-        }
+        label.setText(String.format(
+                "Saved: %s, Loaded : %s",
+                savedInstanceState.getString(SAVED_DATE),
+                df.format(new Date()))
+        );
     }
 
     @Override
@@ -89,8 +87,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        String value = label != null ? label.getText().toString() : "";
-        outState.putString(LABEL_TEXT, value);
+        outState.putString(SAVED_DATE, df.format(new Date()));
     }
 
     @Override
