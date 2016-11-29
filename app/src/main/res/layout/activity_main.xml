@@ -4,16 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
     android:orientation="vertical">
+    <TextView android:id="@+id/main_text"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="default"
+        />
     <EditText android:id="@+id/edit_message"
-        android:layout_height="10dp"
+        android:layout_height="0dp"
         android:layout_weight="1"
-        android:layout_width="200dp"
+        android:layout_width="20dp"
         android:hint="@string/edit_message" />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/button_send"
         android:onClick="sendMessage"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_send_email"
+        android:onClick="sendEmail"/>
+
+
 </LinearLayout>

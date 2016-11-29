@@ -3,5 +3,6 @@
     <string name="action_settings">1Settings</string>
     <string name="edit_message">Ent1er a FUCKING message</string>
     <string name="button_send">Send1</string>
+    <string name="button_send_email">Email</string>
     <string name="pass_intent_msg">Mes1sage:</string>
 </resources>
