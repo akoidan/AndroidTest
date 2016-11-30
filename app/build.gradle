@@ -3,10 +3,9 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 24
     buildToolsVersion "24.0.1"
-
     defaultConfig {
         applicationId "com.example.andrew.android_1_project"
-        minSdkVersion 21
+        minSdkVersion 24
         targetSdkVersion 24
         versionCode 1
         versionName "1.0"
@@ -19,15 +18,20 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+    productFlavors {
+    }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support:appcompat-v7:24.2.1'
     compile 'com.android.support:design:24.2.1'
     compile 'com.android.support:multidex:1.0.1'
     compile 'com.android.support:support-v4:24.2.1'
-    compile "com.android.support:support-core-utils:24.0.1"
+    compile 'com.android.support:support-core-utils:24.0.1'
     testCompile 'junit:junit:4.12'
 }
